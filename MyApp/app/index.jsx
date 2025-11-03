@@ -9,7 +9,7 @@ import {
 
 import { Link } from "expo-router";
 
-import icedCoffeeImg from "../../assets/images/iced-coffee.png";
+import icedCoffeeImg from "@/assets/images/iced-coffee.png";
 
 const app = () => {
   return (
@@ -20,7 +20,7 @@ const app = () => {
         style={styles.image}
       >
         <Text style={styles.title}>Coffee Shop</Text>
-        <Link href={"/explore"} style={{ marginHorizontal: "auto" }} asChild>
+        <Link href={"/menu"} style={{ marginHorizontal: "auto" }} asChild>
           <Pressable style={styles.button}>
             <Text style={styles.buttonText}>Explore</Text>
           </Pressable>
