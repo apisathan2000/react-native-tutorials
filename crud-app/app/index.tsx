@@ -54,7 +54,11 @@ export default function Index() {
     const fetchData = async function () {
       try {
         const jsonValue = await AsyncStorage.getItem("TodoApp");
-        const storageTodos = jsonValue != null ? JSON.parse(jsonValue) : null;
+        const storageTodos: {
+          id: number;
+          title: string;
+          completed: boolean;
+        }[] = jsonValue != null ? JSON.parse(jsonValue) : null;
 
         if (storageTodos && storageTodos.length) {
           setTodos(
